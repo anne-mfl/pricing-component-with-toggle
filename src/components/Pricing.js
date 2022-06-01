@@ -34,9 +34,11 @@ function Pricing({ displayMonthly }) {
     <div className='pb-10 lg:flex lg:items-center lg:px-40'>
       {
         plans.map((plan, key) =>
-          <div className={key % 2 === 1
-            ? 'mb-10 bg-white even:bg-blueGradient even:text-white w-10/12 text-center mx-auto z-10 rounded-xl py-6 px-8 lg:py-12 h-full shadow-md shadow-themeBlue/30'
-            : 'mb-10 bg-white even:bg-blueGradient even:text-white w-10/12 text-center mx-auto z-10 rounded-xl p-6 h-full shadow-md shadow-themeBlue/30'}>
+          <div
+            key={plan.name}
+            className={key % 2 === 1
+              ? 'mb-10 bg-white even:bg-blueGradient even:text-white w-10/12 text-center mx-auto z-10 rounded-xl py-6 px-8 lg:py-12 h-full shadow-md shadow-themeBlue/30'
+              : 'mb-10 bg-white even:bg-blueGradient even:text-white w-10/12 text-center mx-auto z-10 rounded-xl p-6 h-full shadow-md shadow-themeBlue/30'}>
 
             <h1 className='pb-5'>{plan.name}</h1>
 
